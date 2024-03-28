@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Flex } from "antd";
+import "./App.css";
+import SwipeCard from "./components/SwipeCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ margin: "50px 0" }}>
+      <Flex vertical>
+        <Flex justify="center">
+          <SwipeCard colors={["red", "orange", "green", "blue"]} type="long" />
+        </Flex>
+        <Flex justify="center">
+          <SwipeCard colors={["indigo", "purple"]} type="fat" />
+        </Flex>
+      </Flex>
     </div>
   );
 }
